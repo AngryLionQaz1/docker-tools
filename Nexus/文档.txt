@@ -1,0 +1,7 @@
+
+
+
+
+注： 启动时如果出现权限问题可以使用：chmod 777 /usr/tools/Nexus/data 赋予数据卷目录可读可写的权限
+
+地址：http://ip:port/ 用户名：admin 密码：admin123

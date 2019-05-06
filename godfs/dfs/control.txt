@@ -1,0 +1,6 @@
+运行脚本的时候出现”/bin/bash^M: 坏的解释器
+   使用在终端输入sed -i 's/\r$//' make-all-linux-project.sh即可
+   其中make-all-linux-project.sh为我的文件名，这里改成自己需要的即可
+
+
+sed -i 's/\r$//' control
