@@ -1,0 +1,20 @@
+version: '3'
+services:
+  sentile:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: sentile:1.6.2
+    container_name: sentile
+    restart: always
+    networks:
+    - nets
+    volumes:
+    - /usr/tools/Sentinel/logs/:/usr/tools/Sentinel/logs/
+    ports:
+    - "8080:8080"
+    environment:
+    - JAVA_OPTS=-Xmx256M
+networks:
+  nets:
+    external: false
