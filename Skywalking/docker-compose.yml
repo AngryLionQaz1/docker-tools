@@ -1,0 +1,20 @@
+version: '3'
+services:
+  skywalking:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: skywalking:6.2.0
+    container_name: skywalking
+    restart: always
+    ports:
+      - 10800:10800
+      - 11800:11800
+      - 12800:12800
+      - 8080:8080
+    volumes:
+      - ./skywalking/application.yml:/usr/local/skywalking/config/application.yml
+
+networks:
+  nets:
+    external: false
