@@ -1,0 +1,47 @@
+
+下载地址
+
+curl  https://storage.googleapis.com/harbor-releases/release-1.8.0/harbor-offline-installer-v1.8.2-rc1.tgz
+
+tar -zxvf harbor-offline-installer-v1.8.2-rc1.tgz
+
+cd harbor
+
+vim harbor.yml
+
+-----------------------------------------------------
+hostname = 192.168.55.34
+#这里只是简单的测试，所以只编辑这一行，其他的默认不做修改；当然也可以根据你自己的实际情况做修改！
+-----------------------------------------------------
+
+执行安装脚本：
+./instsll.sh
+
+-----------------------------------------------------
+说明：安装报错 找不到docker-proxy 、 docker-runc
+执行 ln -s /usr/libexec/docker/docker-runc-current /usr/bin/docker-runc
+ln -s /usr/libexec/docker/docker-proxy-current /usr/bin/docker-proxy
+-----------------------------------------------------
+
+默认用户密码是：admin/Harbor12345
+
+
+
+
+Harbor容器的stop与start：
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
