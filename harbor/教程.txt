@@ -1,7 +1,7 @@
 
 下载地址
 
-curl  https://storage.googleapis.com/harbor-releases/release-1.8.0/harbor-offline-installer-v1.8.2-rc1.tgz
+wget  https://storage.googleapis.com/harbor-releases/release-1.8.0/harbor-offline-installer-v1.8.2-rc1.tgz
 
 tar -zxvf harbor-offline-installer-v1.8.2-rc1.tgz
 
@@ -36,8 +36,13 @@ Harbor容器的stop与start：
 
 
 
+https://github.com/goharbor/harbor/blob/master/docs/configure_https.md
 
 
+https://www.cnblogs.com/hanxiaohui/p/9257855.html
+
+
+https://www.soulchild.cn/686.html
 
 
 
