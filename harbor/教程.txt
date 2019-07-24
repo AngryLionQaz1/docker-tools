@@ -73,9 +73,10 @@ https://www.soulchild.cn/686.html
     -key 192.168.3.128.key \
     -out 192.168.3.128.csr
 
-v3.ext
+
 
 cat > v3.ext <<-EOF
+
 authorityKeyIdentifier=keyid,issuer
 basicConstraints=CA:FALSE
 keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
