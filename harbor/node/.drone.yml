@@ -1,0 +1,76 @@
+kind: pipeline
+name: node
+
+steps:
+  - name: build
+    image: node:8.9-alpine
+    commands:
+      - pwd
+      - npm install
+      - npm run build
+      - ls -a
+  - name: 构建镜像
+    image: plugins/docker
+    volumes:
+    - name: docker
+      path: /var/run/docker.sock
+    settings:
+      username:
+        from_secret: docker_user
+      password:
+        from_secret: docker_pass
+      repo: 192.168.3.128/example/node
+      registry: 192.168.3.128
+      tags: latest
+
+  - name: deploy
+    image: appleboy/drone-ssh
+    pull: true
+    settings:
+      host: 192.168.3.128
+      user: root
+      password: xiaoyi
+      port: 22
+      script:
+      - cd /data/
+      - mkdir app/
+      - cd /data/app
+      - docker stop node
+      - docker rm -f node
+      - docker rmi -f 192.168.3.128/example/node
+      - echo "login docker"
+      - docker login 192.168.3.128 --username admin --password Harbor12345
+      - echo "login success, pulling..."
+      - docker pull 192.168.3.128/example/node:latest
+      - echo "image running"
+      - docker run -d --name node -p 8088:80 192.168.3.128/example/node
+      - echo "run success"
+
+volumes:
+- name: docker
+  host:
+    path: /var/run/docker.sock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
