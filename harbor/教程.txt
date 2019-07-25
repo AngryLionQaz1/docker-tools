@@ -45,6 +45,27 @@ https://www.cnblogs.com/hanxiaohui/p/9257855.html
 https://www.soulchild.cn/686.html
 
 
+################################################################################################################
+
+cd /etc/docker
+
+daemon.json
+
+{
+    "registry-mirrors": [
+       "https://d8b3zdiw.mirror.aliyuncs.com"
+    ],
+    "insecure-registries": [
+       "https://ower.site.com",
+       "192.168.3.128"
+    ]，
+}
+
+
+systemctl daemon-reload
+
+
+systemctl restart docker.service
 
 
 
