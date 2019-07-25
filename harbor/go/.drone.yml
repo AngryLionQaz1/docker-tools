@@ -1,0 +1,82 @@
+kind: pipeline
+name: demo
+
+steps:
+  - name: build
+    image: golang:1.11.4
+    commands:
+      - pwd
+      - go version
+      - go build .
+      - go test demo/util
+
+  - name: 构建镜像  
+    image: plugins/docker
+    volumes:
+    - name: docker
+      path: /var/run/docker.sock
+    settings:
+      username: 
+        from_secret: docker_user
+      password: 
+        from_secret: docker_pass
+      repo: 192.168.3.128/example/demo
+      registry: 192.168.3.128
+      tags: latest
+
+  - name: deploy
+    image: appleboy/drone-ssh
+    pull: true
+    settings:
+      host: 192.168.3.128
+      user: root
+      password: xiaoyi
+      port: 22
+      script:
+      - cd /data/
+      - mkdir app/
+      - cd /data/app
+      - docker stop demo
+      - docker rm -f demo
+      - docker rmi -f 192.168.3.128/example/demo
+      - echo "login docker"
+      - docker login 192.168.3.128 --username admin --password Harbor12345
+      - echo "login success, pulling..."
+      - docker pull 192.168.3.128/example/demo:latest
+      - echo "image running"
+      - docker run -d --name demo -p 8088:8088 192.168.3.128/example/demo
+      - echo "run success"
+
+        
+        
+
+volumes:
+- name: docker
+  host:
+    path: /var/run/docker.sock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
