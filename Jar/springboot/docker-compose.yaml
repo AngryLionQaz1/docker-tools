@@ -1,0 +1,14 @@
+version: '3'
+services:
+  xiaoyi:
+    image: demo/xiaoyi:latest
+    ports:
+      - "8086:8086"
+    networks:
+    - nets
+    volumes:
+      - ./config:/app/config
+      - ./logs:/app/logs
+networks:
+  nets:
+    external: false

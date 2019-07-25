@@ -2,8 +2,8 @@ version: '3'
 services:
   sentile:
     build:
-      context: .
-      dockerfile: ./Dockerfile
+      context: ..
+      dockerfile: ../Dockerfile
     image: sentile:1.6.2
     container_name: sentile
     restart: always
