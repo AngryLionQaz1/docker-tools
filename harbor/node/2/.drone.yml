@@ -15,12 +15,10 @@ steps:
     - name: docker
       path: /var/run/docker.sock
     settings:
-      username:
-        from_secret: docker_user
-      password:
-        from_secret: docker_pass
-      repo: 49.4.50.233:100/ly/node
-      registry: 49.4.50.233:100
+      username: admin
+      password: xiaoyi
+      repo: 192.168.3.53:100/ly/node
+      registry:  192.168.3.53:100
       tags: latest
 
   - name: deploy
@@ -37,13 +35,13 @@ steps:
       - cd /data/app
       - docker stop node
       - docker rm -f node
-      - docker rmi -f 49.4.50.233:100/ly/node
+      - docker rmi -f 192.168.3.53:100/ly/node
       - echo "login docker"
-      - docker login 49.4.50.233:100 --username admin --password xiaoyi
+      - docker login 192.168.3.53:100 --username admin --password xiaoyi
       - echo "login success, pulling..."
-      - docker pull 49.4.50.233:100/ly/node:latest
+      - docker pull 192.168.3.53:100/ly/node:latest
       - echo "image running"
-      - docker run -d --name node -p 8088:80 49.4.50.233:100/ly/node
+      - docker run -d --name node -p 8088:80 192.168.3.53:100/ly/node
       - echo "run success"
 
 volumes:

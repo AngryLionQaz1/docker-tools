@@ -1,0 +1,78 @@
+kind: pipeline
+name: default
+
+steps:
+- name: Maven
+  image: maven:3-jdk-10
+  volumes:
+  - name: cache
+    path: /root/.m2
+  - name: settings
+    path: /usr/share/maven/conf/settings.xml
+  commands:
+  - mvn clean
+  - mvn package
+  - pwd
+  - ls -a
+- name: docker
+  image: plugins/docker
+  volumes:
+  - name: docker
+    path: /var/run/docker.sock
+  settings:
+    username: admin
+    password: xiaoyi
+    repo: 192.168.3.53:100/ly/trip
+    registry: 192.168.3.53:100
+    tags: latest
+- name: deploy
+  image: appleboy/drone-ssh
+  pull: true
+  settings:
+    host: 192.168.3.128
+    user: root
+    password: xiaoyi
+    port: 22
+    script:
+    - cd /data/
+    - mkdir app/
+    - cd /data/app
+    - docker stop trip
+    - docker rm -f trip
+    - docker rmi -f 192.168.3.53:100/ly/trip
+    - echo "login docker"
+    - docker login 192.168.3.53:100 --username admin --password xiaoyi
+    - echo "login success, pulling..."
+    - docker pull 192.168.3.53:100/ly/trip:latest
+    - echo "image running"
+    - docker run -d --name trip -p 8002:8002 192.168.3.53:100/ly/trip
+    - echo "run success"
+
+volumes:
+- name: cache
+  host:
+    path: /tmp/cache/.m2
+- name: settings
+  host:
+    path: /usr/share/maven/conf/settings.xml
+- name: docker
+  host:
+    path: /var/run/docker.sock
+    
+    
+    
+    
+    
+    
+    
+    
+ 
+    
+    
+    
+    
+    
+    
+    
+    
+ 
