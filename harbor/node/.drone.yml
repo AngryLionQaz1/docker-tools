@@ -19,8 +19,8 @@ steps:
         from_secret: docker_user
       password:
         from_secret: docker_pass
-      repo: 192.168.3.128/example/node
-      registry: 192.168.3.128
+      repo: 49.4.50.233:100/ly/node
+      registry:  49.4.50.233:100
       tags: latest
 
   - name: deploy
@@ -37,13 +37,13 @@ steps:
       - cd /data/app
       - docker stop node
       - docker rm -f node
-      - docker rmi -f 192.168.3.128/example/node
+      - docker rmi -f 49.4.50.233:100/ly/node
       - echo "login docker"
-      - docker login 192.168.3.128 --username admin --password Harbor12345
+      - docker login 49.4.50.233:100 --username admin --password xiaoyi
       - echo "login success, pulling..."
-      - docker pull 192.168.3.128/example/node:latest
+      - docker pull 49.4.50.233:100/ly/node:latest
       - echo "image running"
-      - docker run -d --name node -p 8088:80 192.168.3.128/example/node
+      - docker run -d --name node -p 8088:80 49.4.50.233:100/ly/node
       - echo "run success"
 
 volumes:
