@@ -1,0 +1,131 @@
+2019/04/08 06:07:03 [error] 6#6: *1 directory index of "/usr/share/nginx/html/" is forbidden, client: 192.168.171.1, server: _, request: "GET / HTTP/1.1", host: "192.168.171.132"
+2019/04/08 06:07:03 [error] 6#6: *1 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 192.168.171.1, server: _, request: "GET /favicon.ico HTTP/1.1", host: "192.168.171.132", referrer: "http://192.168.171.132/"
+2019/04/08 06:07:03 [error] 6#6: *1 open() "/usr/share/nginx/html/404.html" failed (2: No such file or directory), client: 192.168.171.1, server: _, request: "GET /favicon.ico HTTP/1.1", host: "192.168.171.132", referrer: "http://192.168.171.132/"
+2019/04/10 03:11:56 [error] 6#6: *1 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 192.168.171.1, server: _, request: "GET /favicon.ico HTTP/1.1", host: "192.168.171.132:81", referrer: "http://192.168.171.132:81/"
+2019/04/10 03:11:56 [error] 6#6: *1 open() "/usr/share/nginx/html/404.html" failed (2: No such file or directory), client: 192.168.171.1, server: _, request: "GET /favicon.ico HTTP/1.1", host: "192.168.171.132:81", referrer: "http://192.168.171.132:81/"
+2019/04/10 03:16:07 [emerg] 1#1: "upstream" directive is not allowed here in /etc/nginx/nginx.conf:46
+2019/04/10 03:16:07 [emerg] 1#1: "upstream" directive is not allowed here in /etc/nginx/nginx.conf:46
+2019/04/10 03:16:08 [emerg] 1#1: "upstream" directive is not allowed here in /etc/nginx/nginx.conf:46
+2019/04/10 03:16:09 [emerg] 1#1: "upstream" directive is not allowed here in /etc/nginx/nginx.conf:46
+2019/04/10 03:16:10 [emerg] 1#1: "upstream" directive is not allowed here in /etc/nginx/nginx.conf:46
+2019/04/10 03:16:12 [emerg] 1#1: "upstream" directive is not allowed here in /etc/nginx/nginx.conf:46
+2019/04/10 03:16:16 [emerg] 1#1: "upstream" directive is not allowed here in /etc/nginx/nginx.conf:46
+2019/04/10 03:16:23 [emerg] 1#1: "upstream" directive is not allowed here in /etc/nginx/nginx.conf:46
+2019/04/10 03:16:36 [emerg] 1#1: "upstream" directive is not allowed here in /etc/nginx/nginx.conf:46
+2019/04/10 03:17:02 [emerg] 1#1: "upstream" directive is not allowed here in /etc/nginx/nginx.conf:46
+2019/04/10 03:17:54 [emerg] 1#1: "upstream" directive is not allowed here in /etc/nginx/nginx.conf:46
+2019/04/10 03:18:54 [emerg] 1#1: "upstream" directive is not allowed here in /etc/nginx/nginx.conf:46
+2019/04/10 03:19:55 [emerg] 1#1: "upstream" directive is not allowed here in /etc/nginx/nginx.conf:46
+2019/04/10 03:28:13 [error] 7#7: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.171.1, server: _, request: "GET /group1 HTTP/1.1", upstream: "http://192.168.171.132:8081/group1", host: "192.168.171.132:81"
+2019/04/10 03:28:13 [error] 7#7: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.171.1, server: _, request: "GET /group1 HTTP/1.1", upstream: "http://192.168.171.130:8080/group1", host: "192.168.171.132:81"
+2019/04/10 03:28:13 [error] 7#7: *1 open() "/usr/share/nginx/html/50x.html" failed (2: No such file or directory), client: 192.168.171.1, server: _, request: "GET /group1 HTTP/1.1", upstream: "http://192.168.171.130:8080/group1", host: "192.168.171.132:81"
+2019/04/10 03:28:54 [error] 7#7: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.171.1, server: _, request: "GET //group1/default/20190410/10/45/6/3d9142405988e43f66a41c4abbc608dd.jpg HTTP/1.1", upstream: "http://192.168.171.132:8081//group1/default/20190410/10/45/6/3d9142405988e43f66a41c4abbc608dd.jpg", host: "192.168.171.132:81"
+2019/04/10 03:28:54 [error] 7#7: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.171.1, server: _, request: "GET //group1/default/20190410/10/45/6/3d9142405988e43f66a41c4abbc608dd.jpg HTTP/1.1", upstream: "http://192.168.171.130:8080//group1/default/20190410/10/45/6/3d9142405988e43f66a41c4abbc608dd.jpg", host: "192.168.171.132:81"
+2019/04/10 03:28:54 [error] 7#7: *1 open() "/usr/share/nginx/html/50x.html" failed (2: No such file or directory), client: 192.168.171.1, server: _, request: "GET //group1/default/20190410/10/45/6/3d9142405988e43f66a41c4abbc608dd.jpg HTTP/1.1", upstream: "http://192.168.171.130:8080//group1/default/20190410/10/45/6/3d9142405988e43f66a41c4abbc608dd.jpg", host: "192.168.171.132:81"
+2019/04/10 03:28:58 [error] 7#7: *1 no live upstreams while connecting to upstream, client: 192.168.171.1, server: _, request: "GET /group1/default/20190410/10/45/6/3d9142405988e43f66a41c4abbc608dd.jpg HTTP/1.1", upstream: "http://group1/group1/default/20190410/10/45/6/3d9142405988e43f66a41c4abbc608dd.jpg", host: "192.168.171.132:81"
+2019/04/10 03:28:58 [error] 7#7: *1 open() "/usr/share/nginx/html/50x.html" failed (2: No such file or directory), client: 192.168.171.1, server: _, request: "GET /group1/default/20190410/10/45/6/3d9142405988e43f66a41c4abbc608dd.jpg HTTP/1.1", upstream: "http://group1/group1/default/20190410/10/45/6/3d9142405988e43f66a41c4abbc608dd.jpg", host: "192.168.171.132:81"
+2019/04/10 03:28:59 [error] 7#7: *1 no live upstreams while connecting to upstream, client: 192.168.171.1, server: _, request: "GET /group1/default/20190410/10/45/6/3d9142405988e43f66a41c4abbc608dd.jpg HTTP/1.1", upstream: "http://group1/group1/default/20190410/10/45/6/3d9142405988e43f66a41c4abbc608dd.jpg", host: "192.168.171.132:81"
+2019/04/10 03:28:59 [error] 7#7: *1 open() "/usr/share/nginx/html/50x.html" failed (2: No such file or directory), client: 192.168.171.1, server: _, request: "GET /group1/default/20190410/10/45/6/3d9142405988e43f66a41c4abbc608dd.jpg HTTP/1.1", upstream: "http://group1/group1/default/20190410/10/45/6/3d9142405988e43f66a41c4abbc608dd.jpg", host: "192.168.171.132:81"
+2019/04/10 03:29:00 [error] 7#7: *1 no live upstreams while connecting to upstream, client: 192.168.171.1, server: _, request: "GET /group1/default/20190410/10/45/6/3d9142405988e43f66a41c4abbc608dd.jpg HTTP/1.1", upstream: "http://group1/group1/default/20190410/10/45/6/3d9142405988e43f66a41c4abbc608dd.jpg", host: "192.168.171.132:81"
+2019/04/10 03:29:00 [error] 7#7: *1 open() "/usr/share/nginx/html/50x.html" failed (2: No such file or directory), client: 192.168.171.1, server: _, request: "GET /group1/default/20190410/10/45/6/3d9142405988e43f66a41c4abbc608dd.jpg HTTP/1.1", upstream: "http://group1/group1/default/20190410/10/45/6/3d9142405988e43f66a41c4abbc608dd.jpg", host: "192.168.171.132:81"
+2019/04/10 03:29:00 [error] 7#7: *1 no live upstreams while connecting to upstream, client: 192.168.171.1, server: _, request: "GET /group1/default/20190410/10/45/6/3d9142405988e43f66a41c4abbc608dd.jpg HTTP/1.1", upstream: "http://group1/group1/default/20190410/10/45/6/3d9142405988e43f66a41c4abbc608dd.jpg", host: "192.168.171.132:81"
+2019/04/10 03:29:00 [error] 7#7: *1 open() "/usr/share/nginx/html/50x.html" failed (2: No such file or directory), client: 192.168.171.1, server: _, request: "GET /group1/default/20190410/10/45/6/3d9142405988e43f66a41c4abbc608dd.jpg HTTP/1.1", upstream: "http://group1/group1/default/20190410/10/45/6/3d9142405988e43f66a41c4abbc608dd.jpg", host: "192.168.171.132:81"
+2019/04/10 03:29:01 [error] 7#7: *1 no live upstreams while connecting to upstream, client: 192.168.171.1, server: _, request: "GET /group1/default/20190410/10/45/6/3d9142405988e43f66a41c4abbc608dd.jpg HTTP/1.1", upstream: "http://group1/group1/default/20190410/10/45/6/3d9142405988e43f66a41c4abbc608dd.jpg", host: "192.168.171.132:81"
+2019/04/10 03:29:01 [error] 7#7: *1 open() "/usr/share/nginx/html/50x.html" failed (2: No such file or directory), client: 192.168.171.1, server: _, request: "GET /group1/default/20190410/10/45/6/3d9142405988e43f66a41c4abbc608dd.jpg HTTP/1.1", upstream: "http://group1/group1/default/20190410/10/45/6/3d9142405988e43f66a41c4abbc608dd.jpg", host: "192.168.171.132:81"
+2019/04/10 03:29:02 [error] 7#7: *1 no live upstreams while connecting to upstream, client: 192.168.171.1, server: _, request: "GET /group1/default/20190410/10/45/6/3d9142405988e43f66a41c4abbc608dd.jpg HTTP/1.1", upstream: "http://group1/group1/default/20190410/10/45/6/3d9142405988e43f66a41c4abbc608dd.jpg", host: "192.168.171.132:81"
+2019/04/10 03:29:02 [error] 7#7: *1 open() "/usr/share/nginx/html/50x.html" failed (2: No such file or directory), client: 192.168.171.1, server: _, request: "GET /group1/default/20190410/10/45/6/3d9142405988e43f66a41c4abbc608dd.jpg HTTP/1.1", upstream: "http://group1/group1/default/20190410/10/45/6/3d9142405988e43f66a41c4abbc608dd.jpg", host: "192.168.171.132:81"
+2019/04/10 03:29:36 [error] 7#7: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.171.1, server: _, request: "GET /group1/default/20190410/10/45/6/3d9142405988e43f66a41c4abbc608dd.jpg HTTP/1.1", upstream: "http://192.168.171.132:8081/group1/default/20190410/10/45/6/3d9142405988e43f66a41c4abbc608dd.jpg", host: "192.168.171.132:81"
+2019/04/10 03:33:46 [error] 7#7: *16 open() "/usr/share/nginx/html/uppy.html" failed (2: No such file or directory), client: 192.168.171.1, server: _, request: "GET /uppy.html HTTP/1.1", host: "192.168.171.132:81"
+2019/04/10 03:33:46 [error] 7#7: *16 open() "/usr/share/nginx/html/404.html" failed (2: No such file or directory), client: 192.168.171.1, server: _, request: "GET /uppy.html HTTP/1.1", host: "192.168.171.132:81"
+2019/04/10 03:34:05 [error] 7#7: *16 open() "/usr/share/nginx/html/upload" failed (2: No such file or directory), client: 192.168.171.1, server: _, request: "GET /upload HTTP/1.1", host: "192.168.171.132:81"
+2019/04/10 03:34:05 [error] 7#7: *16 open() "/usr/share/nginx/html/404.html" failed (2: No such file or directory), client: 192.168.171.1, server: _, request: "GET /upload HTTP/1.1", host: "192.168.171.132:81"
+2019/04/10 03:34:09 [error] 7#7: *16 open() "/usr/share/nginx/html/upload" failed (2: No such file or directory), client: 192.168.171.1, server: _, request: "GET /upload HTTP/1.1", host: "192.168.171.132:81"
+2019/04/10 03:34:09 [error] 7#7: *16 open() "/usr/share/nginx/html/404.html" failed (2: No such file or directory), client: 192.168.171.1, server: _, request: "GET /upload HTTP/1.1", host: "192.168.171.132:81"
+2019/04/10 03:34:14 [error] 7#7: *16 open() "/usr/share/nginx/html/upload" failed (2: No such file or directory), client: 192.168.171.1, server: _, request: "GET /upload HTTP/1.1", host: "192.168.171.132:81"
+2019/04/10 03:34:14 [error] 7#7: *16 open() "/usr/share/nginx/html/404.html" failed (2: No such file or directory), client: 192.168.171.1, server: _, request: "GET /upload HTTP/1.1", host: "192.168.171.132:81"
+2019/04/10 03:40:25 [error] 7#7: *20 open() "/usr/share/nginx/html/group" failed (2: No such file or directory), client: 192.168.171.1, server: _, request: "GET /group HTTP/1.1", host: "192.168.171.132:81"
+2019/04/10 03:40:25 [error] 7#7: *20 open() "/usr/share/nginx/html/404.html" failed (2: No such file or directory), client: 192.168.171.1, server: _, request: "GET /group HTTP/1.1", host: "192.168.171.132:81"
+2019/04/10 03:40:40 [error] 7#7: *20 open() "/usr/share/nginx/html/group/upload/uppy.html" failed (2: No such file or directory), client: 192.168.171.1, server: _, request: "GET /group/upload/uppy.html HTTP/1.1", host: "192.168.171.132:81"
+2019/04/10 03:40:40 [error] 7#7: *20 open() "/usr/share/nginx/html/404.html" failed (2: No such file or directory), client: 192.168.171.1, server: _, request: "GET /group/upload/uppy.html HTTP/1.1", host: "192.168.171.132:81"
+2019/04/10 03:54:37 [error] 6#6: *18 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.171.1, server: _, request: "GET /group1/ HTTP/1.1", upstream: "http://192.168.171.132:8081/group1/", host: "192.168.171.132:81"
+2019/04/10 03:54:57 [error] 6#6: *18 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.171.1, server: _, request: "GET /group1/default/20190410/ HTTP/1.1", upstream: "http://192.168.171.132:8081/group1/default/20190410/", host: "192.168.171.132:81", referrer: "http://192.168.171.132:81/group1/default/"
+2019/04/10 04:38:38 [error] 6#6: *8 open() "/usr/share/nginx/html/s" failed (2: No such file or directory), client: 192.168.171.1, server: _, request: "GET /s HTTP/1.1", host: "192.168.171.132:81"
+2019/04/10 04:38:38 [error] 6#6: *8 open() "/usr/share/nginx/html/404.html" failed (2: No such file or directory), client: 192.168.171.1, server: _, request: "GET /s HTTP/1.1", host: "192.168.171.132:81"
+2019/04/10 04:46:25 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 04:46:26 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 04:46:27 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 04:46:27 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 04:46:29 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 04:46:31 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 04:46:35 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 04:46:42 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 04:46:55 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 04:47:21 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 04:48:13 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 04:49:13 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 04:50:14 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 04:51:15 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 04:52:15 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 04:53:16 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 04:54:16 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 04:55:17 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 04:56:17 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 04:57:18 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 04:58:18 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 04:59:19 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 05:00:19 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 05:01:20 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 05:02:21 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 05:03:21 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 05:04:22 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 05:05:22 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 05:06:23 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 05:07:23 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 05:08:24 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 05:09:24 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 05:10:25 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 05:11:25 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 05:12:26 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 05:13:26 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 05:14:27 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 05:15:27 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 05:16:28 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 05:17:28 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 05:18:29 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 05:19:29 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 05:20:30 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 05:21:30 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 05:22:31 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 05:23:31 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 05:24:32 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 05:25:32 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 05:26:33 [emerg] 1#1: unknown directive "access_by_lua" in /etc/nginx/nginx.conf:56
+2019/04/10 05:31:41 [emerg] 1#1: open() "/etc/nginx/logs/error_www.abc.com.log" failed (2: No such file or directory)
+2019/04/10 05:31:42 [emerg] 1#1: open() "/etc/nginx/logs/error_www.abc.com.log" failed (2: No such file or directory)
+2019/04/10 05:31:42 [emerg] 1#1: open() "/etc/nginx/logs/error_www.abc.com.log" failed (2: No such file or directory)
+2019/04/10 05:31:43 [emerg] 1#1: open() "/etc/nginx/logs/error_www.abc.com.log" failed (2: No such file or directory)
+2019/04/10 05:31:44 [emerg] 1#1: open() "/etc/nginx/logs/error_www.abc.com.log" failed (2: No such file or directory)
+2019/04/10 05:31:47 [emerg] 1#1: open() "/etc/nginx/logs/error_www.abc.com.log" failed (2: No such file or directory)
+2019/04/10 05:31:50 [emerg] 1#1: open() "/etc/nginx/logs/error_www.abc.com.log" failed (2: No such file or directory)
+2019/04/10 05:31:57 [emerg] 1#1: open() "/etc/nginx/logs/error_www.abc.com.log" failed (2: No such file or directory)
+2019/04/10 05:40:48 [emerg] 1#1: invalid URL prefix in /etc/nginx/nginx.conf:54
+2019/04/10 05:40:49 [emerg] 1#1: invalid URL prefix in /etc/nginx/nginx.conf:54
+2019/04/10 05:40:49 [emerg] 1#1: invalid URL prefix in /etc/nginx/nginx.conf:54
+2019/04/10 05:40:50 [emerg] 1#1: invalid URL prefix in /etc/nginx/nginx.conf:54
+2019/04/10 05:40:52 [emerg] 1#1: invalid URL prefix in /etc/nginx/nginx.conf:54
+2019/04/10 05:40:54 [emerg] 1#1: invalid URL prefix in /etc/nginx/nginx.conf:54
+2019/04/10 05:40:57 [emerg] 1#1: invalid URL prefix in /etc/nginx/nginx.conf:54
+2019/04/10 05:41:04 [emerg] 1#1: invalid URL prefix in /etc/nginx/nginx.conf:54
+2019/04/10 05:41:18 [emerg] 1#1: invalid URL prefix in /etc/nginx/nginx.conf:54
+2019/04/10 05:55:44 [error] 9#9: *4 client intended to send too large body: 9128814 bytes, client: 192.168.171.1, server: _, request: "POST /upload HTTP/1.1", host: "192.168.171.132", referrer: "http://192.168.171.132/"
+2019/04/10 05:55:55 [error] 9#9: *13 client intended to send too large body: 1058904 bytes, client: 192.168.171.1, server: _, request: "POST /upload HTTP/1.1", host: "192.168.171.132", referrer: "http://192.168.171.132/"
+2019/04/10 06:03:10 [error] 6#6: *6 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.171.1, server: _, request: "POST /upload HTTP/1.1", upstream: "http://192.168.171.132:8081/upload", host: "192.168.171.132", referrer: "http://192.168.171.132/"
+2019/04/10 06:03:10 [error] 6#6: *6 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.171.1, server: _, request: "POST /upload HTTP/1.1", upstream: "http://192.168.171.133:8080/upload", host: "192.168.171.132", referrer: "http://192.168.171.132/"
+2019/04/10 06:03:10 [error] 6#6: *6 open() "/usr/share/nginx/html/50x.html" failed (2: No such file or directory), client: 192.168.171.1, server: _, request: "POST /upload HTTP/1.1", upstream: "http://192.168.171.133:8080/upload", host: "192.168.171.132", referrer: "http://192.168.171.132/"
+2019/04/10 06:03:15 [error] 6#6: *6 no live upstreams while connecting to upstream, client: 192.168.171.1, server: _, request: "POST /upload HTTP/1.1", upstream: "http://files/upload", host: "192.168.171.132", referrer: "http://192.168.171.132/"
+2019/04/10 06:03:15 [error] 6#6: *6 open() "/usr/share/nginx/html/50x.html" failed (2: No such file or directory), client: 192.168.171.1, server: _, request: "POST /upload HTTP/1.1", upstream: "http://files/upload", host: "192.168.171.132", referrer: "http://192.168.171.132/"
+2019/04/10 06:03:58 [error] 6#6: *6 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.171.1, server: _, request: "POST /upload HTTP/1.1", upstream: "http://192.168.171.132:8081/upload", host: "192.168.171.132", referrer: "http://192.168.171.132/"
+2019/04/10 06:04:22 [error] 6#6: *6 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.171.1, server: _, request: "GET /group1/default/20190410/14/35/6/b60824fd4c9410980ab2158a6a3e70e6.jpg HTTP/1.1", upstream: "http://192.168.171.132:8081/group1/default/20190410/14/35/6/b60824fd4c9410980ab2158a6a3e70e6.jpg", host: "192.168.171.132"
+2019/04/10 06:28:10 [error] 6#6: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.171.1, server: _, request: "GET / HTTP/1.1", upstream: "http://192.168.171.132:8081/", host: "192.168.171.132"
+2019/04/10 06:28:32 [error] 6#6: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.171.1, server: _, request: "POST /upload HTTP/1.1", upstream: "http://192.168.171.132:8081/upload", host: "192.168.171.132", referrer: "http://192.168.171.132/"
+2019/04/10 06:28:46 [error] 6#6: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.171.1, server: _, request: "GET /group1/default/20190410/14/57/6/banner.gif HTTP/1.1", upstream: "http://192.168.171.132:8081/group1/default/20190410/14/57/6/banner.gif", host: "192.168.171.132"
