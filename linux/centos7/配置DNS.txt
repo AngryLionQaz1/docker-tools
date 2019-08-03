@@ -1,0 +1,72 @@
+
+
+配置DNS
+
+
+修改NetworkManager.conf 配置文件
+
+
+vim /etc/NetworkManager/NetworkManager.conf
+
+
+在[main]中添加
+
+dns=no
+
+
+修改resolv.conf配置文件
+
+
+
+vim /etc/resolv.conf
+
+
+添加
+
+
+#主DNS服务器
+nameserver 218.85.157.99
+
+#备DNS服务器
+nameserver 114.114.114.114
+
+
+重启NetworkManager
+
+
+systemctl restart NetworkManager
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

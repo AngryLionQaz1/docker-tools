@@ -1,0 +1,114 @@
+
+安装方法一：
+下载Docker-Compose：
+
+ curl -L https://github.com/docker/compose/releases/download/1.23.0-rc3/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+
+安装Docker-Compose：
+
+chmod +x /usr/local/bin/docker-compose
+
+安装方法二：
+安装pip
+
+yum -y install epel-release
+yum -y install python-pip
+
+确认版本
+pip --version
+更新pip
+pip install --upgrade pip
+安装docker-compose
+pip install docker-compose
+查看版本
+docker-compose version
+安装补全工具：
+为了方便输入命令，也可以安装Docker的补全提示工具帮忙快速输入命令：
+安装
+yum install bash-completion
+下载docker-compose脚本
+
+
+3、Docker-Compose卸载
+如果是二进制包方式安装的，删除二进制文件即可：
+sudo rm /usr/local/bin/docker-compose
+如果通过Python pip工具安装的，则执行如下命令删除：
+sudo pip uninstall docker-compose
+
+
+下载地址
+
+
+https://github.com/docker/compose/releases
+
+
+mv docker-compose-Linux-x86_64 docker-compose
+
+mv docker-compose /usr/local/bin/docker-compose
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

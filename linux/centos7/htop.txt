@@ -1,0 +1,8 @@
+
+安装htop
+
+
+yum install epel-release -y
+yum install htop -y
+
+
