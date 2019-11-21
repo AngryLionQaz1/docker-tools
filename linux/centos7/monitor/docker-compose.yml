@@ -1,0 +1,58 @@
+version: '3.2'
+services:
+  grafana:
+    restart: always
+    image: grafana/grafana
+    container_name: grafana
+    ports:
+      - 3100:3000
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=xiaoyi
+      - GF_USERS_ALLOW_SIGN_UP=false
+    user: '0'
+    volumes:
+     #同步宿主机和容器时间
+      - ./grafana/grafana:/var/lib/grafana
+      - /etc/localtime:/etc/localtime
+  ##prometheus server
+  prometheus:
+    restart: always
+    image: prom/prometheus
+    container_name: prometheus
+    ports:
+      - 3200:9090
+    user: '0'
+    volumes:
+      - ./prometheus/config:/config
+      - ./prometheus/prometheus:/prometheus/data
+    # 指定容器中的配置文件
+    command:
+      - '--config.file=/config/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus/data'
+      - '--storage.tsdb.retention=90d'
+      - '--web.enable-lifecycle'
+  ##node-exporter
+  nodeExporter:
+    restart: always
+    image: prom/node-exporter
+    container_name: node-exporter
+    ports:
+      - 3210:9100
+    volumes:
+      - /proc:/host/proc
+      - /sys:/host/sys
+      - /:/rootfs
+      - ./etc/node_exporter/prom:/node_exporter/prom
+    # 指定容器中的配置文件
+    command:
+      - '--path.procfs=/host/proc'
+      - '--path.sysfs=/host/sys'
+      - '--collector.filesystem.ignored-mount-points=^/(sys|proc|dev|host|etc)($$|/)'
+      - '--collector.textfile.directory=/node_exporter/prom'
+
+
+
+
+
+
+

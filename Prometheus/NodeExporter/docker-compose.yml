@@ -1,0 +1,22 @@
+version: '3.2'
+services:
+  nodeExporter:
+    restart: always
+    image: prom/node-exporter
+    container_name: node-exporter
+    ports:
+      - 3210:9100
+    volumes:
+      - /proc:/host/proc
+      - /sys:/host/sys
+      - /:/rootfs
+      - ./etc/node_exporter/prom:/node_exporter/prom
+    # 指定容器中的配置文件
+    command:
+      - '--path.procfs=/host/proc'
+      - '--path.sysfs=/host/sys'
+      - '--collector.filesystem.ignored-mount-points=^/(sys|proc|dev|host|etc)($$|/)'
+      - '--collector.textfile.directory=/node_exporter/prom'
+
+
+

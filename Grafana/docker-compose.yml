@@ -1,0 +1,19 @@
+version: '3.2'
+services:
+  grafana:
+    restart: always
+    image: grafana/grafana
+    container_name: grafana
+    ports:
+      - 3100:3000
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=xiaoyi
+      - GF_USERS_ALLOW_SIGN_UP=false
+    user: '0'
+    volumes:
+     #同步宿主机和容器时间
+      - ./data/grafana:/var/lib/grafana
+      - /etc/localtime:/etc/localtime
+
+#### 默认账号密码 admin/xiaoyi
+

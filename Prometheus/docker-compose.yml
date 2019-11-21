@@ -1,0 +1,21 @@
+version: '3.2'
+services:
+  prometheus:
+    restart: always
+    image: prom/prometheus
+    container_name: prometheus
+    ports:
+      - 3200:9090
+    user: '0'
+    volumes:
+      - ./data/config:/config
+      - ./data/prometheus:/prometheus/data
+    # 指定容器中的配置文件
+    command:
+      - '--config.file=/config/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus/data'
+      - '--storage.tsdb.retention=90d'
+      - '--web.enable-lifecycle'
+
+
+
