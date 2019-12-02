@@ -1,0 +1,58 @@
+
+https://blog.csdn.net/zwx521515/article/details/77982884
+
+
+
+1、拉取镜像
+
+docker pull registry.cn-hangzhou.aliyuncs.com/helowin/oracle_11g
+
+
+2、创建并容器信息
+
+docker run -d -p 1521:1521 --name oracle_11g registry.aliyuncs.com/helowin/oracle_11g
+
+docker start oracle_11g
+
+
+3、进入控制台设置用户信息
+
+docker exec -it oracle_11g bash
+
+（1）、切换到root用户模式下
+
+su root
+
+输入密码helowin
+
+
+(2)、编辑profile文件配置ORACLE环境变量
+
+vi /etc/profile 并在文件最后添加如下命令
+
+export ORACLE_HOME=/home/oracle/app/oracle/product/11.2.0/dbhome_2
+export ORACLE_SID=helowin
+export PATH=$ORACLE_HOME/bin:$PATH
+
+
+
+￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥
+
+登录
+
+49.4.50.233
+
+用户名：sys/system
+密码：helowin
+端口：1521
+SID: helowin
+
+
+
+
+
+
+
+
+
+

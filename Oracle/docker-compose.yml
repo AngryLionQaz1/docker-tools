@@ -1,0 +1,9 @@
+version: '3'
+services:
+  oracle:
+    image: registry.cn-hangzhou.aliyuncs.com/helowin/oracle_11g
+    container_name: oracle
+    ports:
+      - 1520:1521
+    volumes:
+      - ./data:/app/registry.aliyuncs.com/helowin/oracle_11g
