@@ -1,0 +1,28 @@
+https://hub.docker.com/r/oracleinanutshell/oracle-xe-11g
+
+
+默认配置
+
+hostname: localhost
+port: 1520
+sid: xe
+username: system
+password: oracle
+
+
+Password for SYS & SYSTEM
+
+oracle
+
+
+http://localhost:5500/apex/apex_admin
+
+username: ADMIN
+password: admin
+
+
+
+
+
+
+
