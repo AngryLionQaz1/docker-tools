@@ -1,0 +1,51 @@
+https://www.cnblogs.com/zllwxm123/p/11704142.html
+
+
+
+
+1.第一次安装Docker时，要先设置Docker存储库
+
+sudo apt-get update
+
+安装以下包以允许apt通过HTTPS使用存储库
+
+sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
+
+添加Docker的官方GPG密钥并载入密钥
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+设置稳定的存储库//添加软件源
+
+sudo vim /etc/apt/sources.list
+>>在文件末尾添加官方源<<
+deb https://download.docker.com/linux/debian stretch stable
+
+2.安装Docker
+
+
+sudo apt-get update
+
+
+安装最新版本的Docker CE和containerd
+
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+3、开机自启
+
+systemctl enable docker
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
