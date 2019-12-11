@@ -1,0 +1,10 @@
+version: '3'
+services:
+  oracle:
+    image: ffdfgdfg/nps:0.25.1
+    container_name: nps
+    ports:
+      - 8080:8080
+      - 8024:8024
+    volumes:
+      - ./conf:/conf

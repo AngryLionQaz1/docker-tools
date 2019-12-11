@@ -1,0 +1,12 @@
+version: '3'
+services:
+  oracle:
+    image: ffdfgdfg/npc:0.25.1
+    container_name: npc
+#    ports:
+#      - 8080:8080
+#      - 8024:8024
+    volumes:
+      - ./conf:/conf
+    command:
+     - '-config=/conf/npc.conf'
