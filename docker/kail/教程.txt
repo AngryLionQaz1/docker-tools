@@ -1,0 +1,57 @@
+
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+
+
+echo 'deb https://download.docker.com/linux/debian stretch stable'> /etc/apt/sources.list.d/docker.list
+
+
+apt-get remove docker docker-engine docker.io containerd runc
+
+
+apt-get install apt-transport-https  ca-certificates   curl  gnupg2  software-properties-common
+
+apt-get update
+
+apt-get install docker-ce
+
+
+镜像
+查找镜像 docker search centos
+下载镜像 docker pull centos
+列出镜像 docker image ls
+删除镜像 docker image rm 9f3
+
+
+
+容器
+运行容器 docker run -it centos /bin/bash
+后台运行 docker run -dit centos /bin/bash
+列出容器 docker container ls 或者 docker ps
+终止容器 docker stop 852
+启动容器
+进入容器 docker exec -it 8529 bash
+导入导出
+删除容器
+
+
+systemctl enable docker
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
