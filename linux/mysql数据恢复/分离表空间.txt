@@ -1,0 +1,23 @@
+
+alter table s_integral_rule discard tablespace;
+alter table s_convert discard tablespace;
+alter table s_banner discard tablespace;
+alter table s_topic_b discard tablespace;
+alter table s_record discard tablespace;
+alter table s_bonus_rule discard tablespace;
+alter table s_msg discard tablespace;
+alter table s_user discard tablespace;
+alter table s_topic discard tablespace;
+alter table s_comment discard tablespace;
+alter table s_news discard tablespace;
+alter table s_prize discard tablespace;
+alter table s_integral discard tablespace;
+alter table s_likes discard tablespace;
+alter table s_answer discard tablespace;
+alter table s_learning_record discard tablespace;
+alter table s_feedback discard tablespace;
+alter table s_article discard tablespace;
+
+
+
+

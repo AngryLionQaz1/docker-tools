@@ -1,0 +1,10 @@
+
+// 先设置外键约束检查关闭
+
+
+SET foreign_key_checks = 0;
+
+ // 开启外键约束检查，以保持表结构完整性
+
+ 
+SET foreign_key_checks = 1;
