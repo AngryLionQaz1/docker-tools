@@ -1,0 +1,28 @@
+
+https://www.runoob.com/linux/linux-filesystem.html
+
+
+
+df -h
+
+fdisk -l
+
+mkfs -t ext4 /dev/vdb
+
+mount /dev/vdb /mnt/vdb
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
