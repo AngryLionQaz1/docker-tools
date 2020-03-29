@@ -1,0 +1,44 @@
+
+
+
+
+java -jar glassfish-installer-v2.1.1-b31g-linux.jar
+
+
+
+cmd /usr/local/glassfish
+
+
+/usr/local/glassfish/lib/ant/bin/ant -f setup.xml
+
+
+
+1.修改glassfish的默认admin密码：
+
+
+change-admin-password
+
+
+
+2.开启glassfish服务的远程安全访问机制：
+
+enable-secure-admin
+
+asadmin stop-domain domain1
+
+asadmin start-domain domain1
+
+
+忘记密码
+
+delete-domain domain1
+
+create-domain --adminport 4848 domain1
+
+
+
+
+
+
+
+
