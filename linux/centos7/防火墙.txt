@@ -22,7 +22,7 @@ firewall-cmd --reload
 
 其他常用命令：
 
- firewall-cmd --state                          ##查看防火墙状态，是否是running
+firewall-cmd --state                          ##查看防火墙状态，是否是running
 firewall-cmd --reload                          ##重新载入配置，比如添加规则之后，需要执行此命令
 firewall-cmd --get-zones                      ##列出支持的zone
 firewall-cmd --get-services                    ##列出支持的服务，在列表中的服务是放行的

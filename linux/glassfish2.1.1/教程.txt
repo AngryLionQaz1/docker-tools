@@ -6,8 +6,9 @@ java -jar glassfish-installer-v2.1.1-b31g-linux.jar
 
 
 
-cmd /usr/local/glassfish
+cd /usr/local/glassfish
 
+chmod +x /usr/local/glassfish/lib/ant/bin/ant
 
 /usr/local/glassfish/lib/ant/bin/ant -f setup.xml
 
@@ -34,6 +35,7 @@ asadmin start-domain domain1
 delete-domain domain1
 
 create-domain --adminport 4848 domain1
+
 
 
 
