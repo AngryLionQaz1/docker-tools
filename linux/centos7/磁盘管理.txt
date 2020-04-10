@@ -11,7 +11,7 @@ mkfs -t ext4 /dev/vdb
 
 mount /dev/vdb /mnt/vdb
 
-
+umount /dev/vdb
 
 
 

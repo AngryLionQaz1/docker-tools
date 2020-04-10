@@ -41,6 +41,35 @@ create-domain --adminport 4848 domain1
 
 
 
+解决内存溢出
+
+/glassfish/domain/domain1/config
+
+domain.xml
+
+搜索
+
+<jvm-options>-XX:MaxPermSize=192M
+
+192改为 512
+
+
+
+        <jvm-options>-Djava.awt.headless=true</jvm-options>
+        <jvm-options>-Xms6144m</jvm-options>
+        <jvm-options>-Xmx6144m</jvm-options>
+        <jvm-options>-XX:PermSize=1024m</jvm-options>
+        <jvm-options>-XX:MaxPermSize=2048m</jvm-options>
+        <jvm-options>-XX:MaxNewSize=256m</jvm-options>
+        <jvm-options>-server</jvm-options>
+
+
+
+
+
+
+
+
 
 
 
