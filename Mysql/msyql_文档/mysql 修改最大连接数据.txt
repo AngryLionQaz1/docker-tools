@@ -1,0 +1,18 @@
+
+1、进入MySQL容器
+
+docker exec -it [container_id] /bin/bash
+
+2、登录MySQL
+
+mysql -u root -p[password]
+
+3、查看最大连接数（默认为100）
+
+SHOW VARIABLES LIKE '%max_con%';
+
+4、设置最大连接数
+
+SET GLOBAL max_connections = 1000;
+
+5、退出MySQL容器，重启容器后会失效
