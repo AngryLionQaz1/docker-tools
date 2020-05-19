@@ -6,3 +6,4 @@ yum install epel-release -y
 yum install htop -y
 
 
+https://www.cnblogs.com/programmer-tlh/p/11726016.html
