@@ -8,7 +8,7 @@ services:
       - 3306:3306
     environment:
       TZ: Asia/Shanghai
-      MYSQL_ROOT_PASSWORD: liaoin@2019
+      MYSQL_ROOT_PASSWORD: liaoin@2020
     command:
       --character-set-server=utf8mb4
       --collation-server=utf8mb4_general_ci
