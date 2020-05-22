@@ -1,0 +1,22 @@
+
+https://docs.imgproxy.net/#/generating_the_url_basic?id=format-definition
+
+
+
+fit：调整图像的大小，同时保持纵横比，以适应给定的大小;
+fill：调整图像大小，同时保持纵横比以填充给定大小和裁剪投影部件;
+auto：如果源尺寸和生成的尺寸具有相同的方向（纵向或横向），则 imgproxy 将使用 。否则，它将使用 。fillfit
+
+http://49.4.50.233:9100/imgproxy/fill/300/400/sm/0/plain/http://49.4.50.233:9000/test/%E4%BA%86%E8%B5%A2%E6%A1%8C%E9%9D%A22.png
+http://49.4.50.233:9100/imgproxy/auto/300/400/sm/0/plain/http://49.4.50.233:9000/test/%E4%BA%86%E8%B5%A2%E6%A1%8C%E9%9D%A22.png
+
+本地
+http://49.4.50.233:9100/insecure/fit/300/200/no/0/plain/local:///test/%E4%BA%86%E8%B5%A2%E6%A1%8C%E9%9D%A22.png
+http://49.4.50.233:9100/insecure/plain/local:///test/%E4%BA%86%E8%B5%A2%E6%A1%8C%E9%9D%A22.png
+
+图片原始大小
+http://49.4.50.233:9100/imgproxy/plain/http://49.4.50.233:9000/test/%E4%BA%86%E8%B5%A2%E6%A1%8C%E9%9D%A22.png
+
+
+
+

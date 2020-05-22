@@ -1,0 +1,8 @@
+version: '3'
+services:
+  imgproxy:
+    image: darthsim/imgproxy:latest                               # 原镜像`darthsim/imgproxy:latest`
+    container_name: imgproxy                                        # 容器名为'minio'
+    restart: always                                              # 指定容器退出后的重启策略为始终重启
+    ports:
+      - "9100:8080"
