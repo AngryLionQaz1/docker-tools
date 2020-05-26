@@ -1,0 +1,16 @@
+
+
+Windows Server远程桌面不能复制粘贴的解决办法
+
+
+Windows远程桌面与本地电脑不能复制粘贴文件，主要是因为rdpclip.exe 程序出现故障导致。只主要重启一下 rdpclip.exe就可以了。
+
+
+
+扩充：
+edpclip.exe 是Windows Server资源工具包中提供的Rdpclip.exe实用程序，它的功能就是在“终端服务”客户端(本机)和“终端”服务器(远程服务器)之间复制和粘贴文件，也包括粘贴文本。
+
+
+
+
+
