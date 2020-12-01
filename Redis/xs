@@ -1,0 +1,8 @@
+docker run -d \
+    --name redis-server \
+    -p 6379:6379 \
+    --restart always \
+    -v $PWD/data:/data:Z \
+    -v $PWD/conf/redis.conf:/usr/local/etc/redis/redis.conf:Z \
+    redis:latest \
+    redis-server /usr/local/etc/redis/redis.conf

@@ -9,8 +9,14 @@ yum remove docker  docker-common docker-selinux docker-engine
 
 安装需要的软件包， yum-util 提供yum-config-manager功能，另外两个是devicemapper驱动依赖的
 
+yum -y install yum-utils
 
-yum install -y yum-utils device-mapper-persistent-data lvm2
+
+ yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+
+ 国外镜像一般很难访问，建议配置阿里云镜像
+
+yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 
 
 设置yum源
