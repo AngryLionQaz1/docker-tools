@@ -30,3 +30,4 @@ services:
       - ./system/mysql:/var/lib/mysql
     ports:
       - "10086:10086"
+
