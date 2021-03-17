@@ -1,0 +1,15 @@
+version: '3.1'
+services:
+  srs:
+    restart: always
+    image: registry.cn-hangzhou.aliyuncs.com/ossrs/srs:v4.0.76
+    container_name: srs
+    ports:
+      - 1935:1935
+      - 1985:1985
+      - 8080:8080
+      - 8000:8000/udp
+    environment:
+      TZ: Asia/Shanghai
+      CANDIDATE: 192.168.136.128
+
