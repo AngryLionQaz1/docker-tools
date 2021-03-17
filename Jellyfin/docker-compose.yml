@@ -1,0 +1,17 @@
+version: "3.1"
+services:
+  jellyfin:
+    image: jellyfin/jellyfin
+    user: 1000:1000
+    network_mode: "host"
+    ports:
+    - 8096:8096
+    volumes:
+      - ./opt/jellyfin/config:/config
+      - ./opt/jellyfin/cache:/cache
+      - ./path/to/media:/media
+
+
+
+        ####  chown -R 1000 ./opt   把当前目录的拥有者赋值给uid 1000
+        ####  chown -R 1000 ./path  把当前目录的拥有者赋值给uid 1000
