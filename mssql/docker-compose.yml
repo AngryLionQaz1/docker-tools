@@ -1,0 +1,17 @@
+version: '3.1'
+services:
+  mysql:
+    restart: always
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: mssql
+    ports:
+      - 1433:1433
+    environment:
+      TZ: Asia/Shanghai
+      ACCEPT_EULA: Y
+      SA_PASSWORD: xiaoYi@123
+#    volumes:
+#      - ./data:/var/opt/mssql
+
+
+##  https://docs.microsoft.com/zh-cn/sql/linux/quickstart-install-connect-docker?view=sql-server-ver15&pivots=cs1-bash
