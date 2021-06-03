@@ -1,6 +1,6 @@
 version: '3.1'
 services:
-  mysql:
+  mssql:
     restart: always
     image: mcr.microsoft.com/mssql/server:2019-latest
     container_name: mssql
@@ -15,3 +15,15 @@ services:
 
 
 ##  https://docs.microsoft.com/zh-cn/sql/linux/quickstart-install-connect-docker?view=sql-server-ver15&pivots=cs1-bash
+
+
+
+#  docker exec -it mssql "bash"
+#
+#  /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P xiaoYi@123
+#
+#  CREATE DATABASE flyover
+#
+#  SELECT Name from sys.Databases
+#
+#  GO

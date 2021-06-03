@@ -1,0 +1,41 @@
+version: '3'
+services:
+  elasticsearch:
+    image: elasticsearch:7.7.0
+    container_name: elasticsearch
+    environment:
+      - "cluster.name=elasticsearch" #设置集群名称为elasticsearch
+      - "discovery.type=single-node" #以单一节点模式启动
+      - "ES_JAVA_OPTS=-Xms4096m -Xmx4096m" #设置使用jvm内存大小
+    volumes:
+      - ./data/elasticsearch/plugins:/usr/share/elasticsearch/plugins #插件文件挂载
+      - ./data/elasticsearch/data:/usr/share/elasticsearch/data #数据文件挂载
+      - ./data/elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml #配置文件挂载
+    ports:
+      - 9200:9200
+      - 9300:9300
+
+
+
+
+#创建es用户
+#  groupadd es
+#  useradd es -g es
+#  #设置es用户的密码为es
+#  passwd es
+#
+#  vim /etc/sudoers
+#  在root ALL=(ALL) ALL下面一行添加：es ALL=(ALL) ALL
+
+
+
+
+#插件文件挂载的权限
+
+#  chown -R es.es  /root/xy/docker/es/data/elasticsearch/plugins/
+
+#数据文件挂载
+
+#  chown -R es.es  /root/xy/docker/es/data/elasticsearch/data/
+
+
