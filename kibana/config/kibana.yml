@@ -1,0 +1,4 @@
+server.name: kibana
+server.host: "0"
+elasticsearch.hosts: [ "http://192.168.136.128:9200" ]
+i18n.locale: "zh-CN"

@@ -16,7 +16,7 @@ services:
       - 9300:9300
 
 
-
+# https://blog.csdn.net/u014756339/article/details/107161425
 
 #创建es用户
 #  groupadd es
@@ -38,4 +38,11 @@ services:
 
 #  chown -R es.es  /root/xy/docker/es/data/elasticsearch/data/
 
+# ik 分词
 
+
+#  docker exec -it 115f6c2b2bc1 /bin/bash
+
+#  cd /usr/share/elasticsearch/bin
+
+#  elasticsearch-plugin list

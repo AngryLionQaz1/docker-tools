@@ -1,0 +1,9 @@
+
+
+vim deploy.sh
+
+set ff=unix
+
+或
+
+set fileformat=unix

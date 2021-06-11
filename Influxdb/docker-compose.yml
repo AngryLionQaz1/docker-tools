@@ -1,0 +1,19 @@
+version: '3.1'
+services:
+  influxdb:
+    image: influxdb:2.0
+    container_name: influxdb
+    volumes:
+      - ./data/influxdb/conf:/etc/influxdb2
+      - ./data/influxdb/data:/var/lib/influxdb2
+    environment:
+      DOCKER_INFLUXDB_INIT_USERNAME: root         #为系统初始超级用户设置的用户名（必需）
+      DOCKER_INFLUXDB_INIT_PASSWORD: root@xiaoyi  #为系统初始超级用户设置的密码（必需）
+      DOCKER_INFLUXDB_INIT_ORG: snow              #为系统初始组织设置的名称（所需）
+      DOCKER_INFLUXDB_INIT_BUCKET: db             #为系统初始存储桶（所需）设置的名称
+      DOCKER_INFLUXDB_INIT_RETENTION: 1w          #系统初始存储桶的持续时间应保留数据。如果不设置，初始存储桶将永久保留数据
+      OCKER_INFLUXDB_INIT_ADMIN_TOKEN: a2008212121a #与系统初始超级用户关联的认证令牌。如果不设置，系统将自动生成令牌
+    ports:
+      - "8083:8083"
+      - "8086:8086"
+#    restart: always
